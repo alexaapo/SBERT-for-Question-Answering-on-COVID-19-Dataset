@@ -20,3 +20,14 @@ Unfortunately, the results isn't so satisfactory and it turns out that the Brute
 
 
 ## 2nd Model of sentence embeddings
+This time I selected to tokenize only the abstract of each paper, since I wanted to search for the answer firstly with criterion these parts and not in the title and the body texts. I wanted to save more time and memory. Then, I select a model provided by gsarti for ranking purposes [covidbert-nli](https://huggingface.co/gsarti/covidbert-nli), a fine-tuned version of Deepset's CovidBERT.
+
+This model is trained on SNLI and MultiNLI using the sentence-transformers library to produce universal sentence embeddings. Embeddings are subsequently used to perform semantic search on CORD-19.
+
+In this notebook I follow this strategy:
+
+* I rank the abstract of each article.
+* I rank the paragraphs (body texts) of the best (most similar) abstracts.
+* Comprehened the top paragraphs of the retrieved documents using ***HuggingFace*** question-answering pipeline.
+
+For comprehension I used the [CovidBERT](https://huggingface.co/deepset/covid_bert_base) model on [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/) question answering data [covid_squad](https://huggingface.co/graviraja/covid_squad), a fine-tuned version of Deepset's CovidBERT on SQuAD dataset.
