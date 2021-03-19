@@ -42,3 +42,10 @@ In general, I have to admit that I was more satisfied with my second model. The 
 ***Note***: I used the second version of the [COVID-19 Open Research Dataset (CORD-19)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html) in my work (articles in the folder ***comm_use_subset***). This includes 9118 articles.
 
 My solution is implemented in ***PyTorch*** and the report is well documented. For running the notebooks, I used the Google Colab with its GPU.
+
+
+
+
+You can check the Google Colab Notebooks here:
+  * 1st attempt of sentence embeddings: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Ow2ahHKbExwB_UWLIXrz4M_xUU8WiASu)
+  * 2nd attempt of sentence embeddings: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1owbUS0A0bHad45qHyMnnzl52bGdjwBWH)
